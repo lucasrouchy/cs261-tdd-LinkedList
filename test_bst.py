@@ -35,33 +35,33 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertIsNone(bst.key)
         self.assertIsNone(bst.parent)
 
-    # def test_instatiate_with_key(self):
-    #     """
-    #     A BST (node) can be instantiated with an initial key.
-    #     When one isn't provided, the key is None.
-    #     Hint: Use Python's 'default arguments' feature.
-    #     """
-    #     bst = BinarySearchTree()
-    #     self.assertIsNone(bst.key)
-    #     bst = BinarySearchTree(42)
-    #     self.assertEqual(42, bst.key)
+    def test_instatiate_with_key(self):
+        """
+        A BST (node) can be instantiated with an initial key.
+        When one isn't provided, the key is None.
+        Hint: Use Python's 'default arguments' feature.
+        """
+        bst = BinarySearchTree()
+        self.assertIsNone(bst.key)
+        bst = BinarySearchTree(42)
+        self.assertEqual(42, bst.key)
 
     # """
     # Cute, single-level trees. (Depth of zero.)
     # """
 
-    # def test_insert_single_smaller(self):
-    #     """
-    #     Inserting a node into a single-level tree appends the new node as the
-    #     left child, when the new node key is less than the parent's key.
-    #     (A new node whose key is <= parent key becomes the left child.)
-    #     and updates the child's parent
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     child = BinarySearchTree(1)
-    #     bst.insert(child)
-    #     self.assertEqual(child, bst.left)
-    #     self.assertEqual(bst, child.parent)
+    def test_insert_single_smaller(self):
+        """
+        Inserting a node into a single-level tree appends the new node as the
+        left child, when the new node key is less than the parent's key.
+        (A new node whose key is <= parent key becomes the left child.)
+        and updates the child's parent
+        """
+        bst = BinarySearchTree(5)
+        child = BinarySearchTree(1)
+        bst.insert(child)
+        self.assertEqual(child, bst.left)
+        self.assertEqual(bst, child.parent)
 
     # def test_insert_single_equal(self):
     #     """

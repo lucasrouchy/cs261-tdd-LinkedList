@@ -11,3 +11,9 @@ class BinarySearchTree:
       self.parent = None
       self.left = None
       self.right= None
+   def insert(self, child):
+      if child.key <= self.key:
+         if self.left is None:
+            self.left = child
+            self.left.parent = self
+
