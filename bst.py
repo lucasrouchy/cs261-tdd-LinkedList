@@ -6,4 +6,5 @@
 # YOUR NAME
 
 class BinarySearchTree:
-   pass
+   def __init__(self):
+      pass
