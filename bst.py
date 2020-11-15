@@ -6,5 +6,8 @@
 # YOUR NAME
 
 class BinarySearchTree:
-   def __init__(self):
-      pass
+   def __init__(self, key=None):
+      self.key = key
+      self.parent = None
+      self.left = None
+      self.right= None
