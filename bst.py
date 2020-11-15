@@ -16,4 +16,8 @@ class BinarySearchTree:
          if self.left is None:
             self.left = child
             self.left.parent = self
+      else:
+         if self.right is None:
+            self.right = child
+            self.right.parent = self
 
