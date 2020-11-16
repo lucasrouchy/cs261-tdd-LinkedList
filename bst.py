@@ -20,4 +20,10 @@ class BinarySearchTree:
          if self.right is None:
             self.right = child
             self.right.parent = self
+   def search(self, key):
+      if key is self.key:
+         return self
+
+
+
 
