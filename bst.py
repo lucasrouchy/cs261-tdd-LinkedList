@@ -42,8 +42,13 @@ class BinarySearchTree:
    def delete(self, target_node):
       if target_node != self.key:
          return self
-      
-
+      if target_node.left != None and target_node.right != None:
+         if target_node.value < target_node.parent.value:
+            target_node.parent.left = None
+         else:
+            target_node.parent.right = None
+         
+            
 
 
 
