@@ -16,10 +16,16 @@ class BinarySearchTree:
          if self.left is None:
             self.left = child
             self.left.parent = self
-      else:
+            return
+         else:
+               return self.left.insert(child)
+      if child.key > self.key:
          if self.right is None:
             self.right = child
             self.right.parent = self
+            return
+         else:
+            return self.right.insert(child)
    def search(self, key):
       if key is self.key:
          return self
