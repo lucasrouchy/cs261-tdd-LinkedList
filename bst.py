@@ -23,9 +23,10 @@ class BinarySearchTree:
    def search(self, key):
       if key is self.key:
          return self
-   def delete(self, key):
-      if self.key != key:
+   def delete(self, target_node):
+      if target_node != self.key:
          return self
+      
 
 
 
